@@ -13,5 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test-page', 'HomeController@indexA');
-Route::get('/test', 'HomeController@index');
+Route::get('/article', 'HomeController@index')->name('article_detail');
+Route::get('/user','HomeController@User')->name('user_detail');
+
+Route::get('/','HomeController@indexTest')->name('home');
+Route::post('/them', 'HomeController@them')->name('them');
+
+Route::get('/listusers', 'UserController@list')->name('list_user');
+Route::post('/themuser', 'UserController@them')->name('them_user');
